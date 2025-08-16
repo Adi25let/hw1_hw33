@@ -13,6 +13,14 @@ class AnimalAdapter: RecyclerView.Adapter<AnimalAdapter.ViewHolder>() {
         AnimalModel(title = "Dad", desc = "0555555555", img = "https://icdn.lenta.ru/images/2023/09/15/17/20230915175028782/square_320_62dfd2e5218b89d74316ddf923d9d7d3.jpg"),
         AnimalModel(title = "Sister", desc = "0557575757", img = "https://icdn.lenta.ru/images/2023/09/15/17/20230915175028782/square_320_62dfd2e5218b89d74316ddf923d9d7d3.jpg"),
         AnimalModel(title = "Brother", desc = "0557575757", img = "https://icdn.lenta.ru/images/2023/09/15/17/20230915175028782/square_320_62dfd2e5218b89d74316ddf923d9d7d3.jpg"),
+        AnimalModel(title = "Mama", desc = "0559595959", img = "https://icdn.lenta.ru/images/2023/09/15/17/20230915175028782/square_320_62dfd2e5218b89d74316ddf923d9d7d3.jpg"),
+        AnimalModel(title = "Dad", desc = "0555555555", img = "https://icdn.lenta.ru/images/2023/09/15/17/20230915175028782/square_320_62dfd2e5218b89d74316ddf923d9d7d3.jpg"),
+        AnimalModel(title = "Sister", desc = "0557575757", img = "https://icdn.lenta.ru/images/2023/09/15/17/20230915175028782/square_320_62dfd2e5218b89d74316ddf923d9d7d3.jpg"),
+        AnimalModel(title = "Brother", desc = "0557575757", img = "https://icdn.lenta.ru/images/2023/09/15/17/20230915175028782/square_320_62dfd2e5218b89d74316ddf923d9d7d3.jpg"),
+        AnimalModel(title = "Mama", desc = "0559595959", img = "https://icdn.lenta.ru/images/2023/09/15/17/20230915175028782/square_320_62dfd2e5218b89d74316ddf923d9d7d3.jpg"),
+        AnimalModel(title = "Dad", desc = "0555555555", img = "https://icdn.lenta.ru/images/2023/09/15/17/20230915175028782/square_320_62dfd2e5218b89d74316ddf923d9d7d3.jpg"),
+        AnimalModel(title = "Sister", desc = "0557575757", img = "https://icdn.lenta.ru/images/2023/09/15/17/20230915175028782/square_320_62dfd2e5218b89d74316ddf923d9d7d3.jpg"),
+        AnimalModel(title = "Brother", desc = "0557575757", img = "https://icdn.lenta.ru/images/2023/09/15/17/20230915175028782/square_320_62dfd2e5218b89d74316ddf923d9d7d3.jpg")
     );
 
     override fun onCreateViewHolder(
@@ -38,7 +46,7 @@ class AnimalAdapter: RecyclerView.Adapter<AnimalAdapter.ViewHolder>() {
         fun onBind(animalModel: AnimalModel) {
             binding.tvTitle.text = animalModel.title
             binding.tvDesc.text = animalModel.desc
-            Glide.with(binding.ivPhoto).load(animalModel).into(binding.ivPhoto);
+            Glide.with(binding.ivPhoto).load(animalModel.img).into(binding.ivPhoto);
         }
 
     }
